@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Primeros Pasos con JavaScript</title>
+  <style>
+    body {
+    background-color: #d5ebffdf;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #0019a6a6;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      
+    }
+
+    header small {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      border-bottom: 1px solid #710d82;
+      font-weight: 600;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "⭢";
+      margin-left: 5px;
+      font-size: 12px;
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      margin-bottom: 30px;
+      min-width: 300px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #horaActual {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <h1>MIS PRIMEROS PASO EN JAVA SCRIPT♥️</h1>
+    <small>Semana 14</small>
+  </header>
+
+  
+  <nav>
+     <a href="index.html">Inicio</a>
+    <a href="saludo.html">Saludo</a>
+    <a href="sumar.html">sumar</a>
+    <a href="contador.html">Contador</a>
+    <a href="validacion.html">Validar nombre</a>
+    <a href="hora.html">Hora</a>
+  </nav>
+
+ <div style="text-align: center; margin-top: 40px;">
+  <h2>➕ Sumar Dos Números</h2>
+  <input type="number" id="numero1" placeholder="Número 1">
+  <input type="number" id="numero2" placeholder="Número 2">
+  <button onclick="sumarNumeros()">Sumar</button>
+  <p id="resultadoSuma"></p>
+</div>
+
+<script>
+  function sumarNumeros() {
+    const num1 = parseFloat(document.getElementById("numero1").value);
+    const num2 = parseFloat(document.getElementById("numero2").value);
+    const suma = num1 + num2;
+
+    if (!isNaN(suma)) {
+      document.getElementById("resultadoSuma").innerText = "Resultado: " + suma;
+    } else {
+      document.getElementById("resultadoSuma").innerText = "Por favor ingresa ambos números.";
+    }
+  }
+</script>
+</body>
+</html>

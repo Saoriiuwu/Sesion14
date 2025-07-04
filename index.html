@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Primeros Pasos con JavaScript</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+    }
+
+    /* Encabezado estilo SODP */
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    header small {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+      color: #666;
+    }
+
+    /* Menú de navegación */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      font-weight: 600;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "⭢";
+      margin-left: 5px;
+      font-size: 12px;
+    }
+
+    /* Sección del contenido */
+    main {
+      padding: 40px 20px;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <h1>MIS PRIMEROS PASO EN JAVA SCRIPT♥️</h1>
+    
+  </header>
+
+  <nav>
+    <a href="saludo.html">Saludo</a>
+    <a href="sumar.html">Sumar</a>
+    <a href="contador.html">Contador</a>
+    <a href="validacion.html">Validar nombre</a>
+    <a href="hora.html">Hora</a>
+  </nav>
+
+  
+  <main>
+    <section>
+      <h2>🌈Cambiar Color de Fondo🌈</h2>
+      <button onclick="cambiarColor('lightblue')">Azul</button>
+      <button onclick="cambiarColor('lightgreen')">Verde</button>
+      <button onclick="cambiarColor('white')">Blanco</button>
+      <button onclick="cambiarColor('pink')">rosado</button>
+    </section>
+  </main>
+
+  <script>
+    function cambiarColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>

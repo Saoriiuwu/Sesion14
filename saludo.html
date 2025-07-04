@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Primeros Pasos con JavaScript</title>
+  <style>
+   body {
+    background-color: #d5ebffdf;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #0019a6a6;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      
+    }
+
+    header small {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      border-bottom: 1px solid #710d82;
+      font-weight: 600;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "⭢";
+      margin-left: 5px;
+      font-size: 12px;
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      margin-bottom: 30px;
+      min-width: 300px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+ <header>
+    <h1>MIS PRIMEROS PASO EN JAVA SCRIPT♥️</h1>
+    <small>Semana 14</small>
+  </header>
+
+  
+  <nav>
+     <a href="index.html">Inicio</a>
+    <a href="saludo.html">Saludo</a>
+    <a href="sumar.html">sumar</a>
+    <a href="contador.html">Contador</a>
+    <a href="validacion.html">Validar nombre</a>
+    <a href="hora.html">Hora</a>
+  </nav>
+
+
+  <div class="container">
+    <h2>🙋‍♀️ Saludo Personalizado</h2>
+    <input type="text" id="nombreUsuario" placeholder="Tu nombre">
+    <button onclick="saludar()">Saludar</button>
+    <p id="saludoResultado"></p>
+  </div>
+
+  <script>
+
+    function saludar() {
+      const nombre = document.getElementById('nombreUsuario').value.trim();
+      const saludo = nombre ? `¡Hola, ${nombre}! 👋` : 'Por favor, ingresa tu nombre.';
+      document.getElementById('saludoResultado').innerText = saludo;
+    }
+  </script>
+</body>
+</html>
